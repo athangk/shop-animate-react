@@ -8,6 +8,27 @@ Install it and run:
 npm install
 npm start
 ```
-https://github.com/athangk/shop-animate-react/blob/main/video_1.mp4
 
-<video src='https://github.com/athangk/shop-animate-react/blob/main/video_1.mp4' width=180/>
+
+#### - Open app, navigate to products 
+<p float=left>
+<img src="https://github.com/athangk/shop-animate-react/blob/main/video_1_gif.gif">
+  </p>
+
+
+#### - Navigate to single product
+<p float=left>
+<img src="https://github.com/athangk/shop-animate-react/blob/main/video_2_gif.gif">
+  </p>
+  
+  #### - Return back to products, use filters
+<p float=left>
+<img src="https://github.com/athangk/shop-animate-react/blob/main/video_3_gif.gif">
+  </p>
+
+
+#### - Use filters return to categories
+<p float=left>
+<img src="https://github.com/athangk/shop-animate-react/blob/main/video_4_gif.gif">
+  </p>
+
