@@ -1,0 +1,11 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: #a2e0db29;
+  font-family: "Quicksand", sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
