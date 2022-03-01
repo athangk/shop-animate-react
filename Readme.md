@@ -8,6 +8,6 @@ Install it and run:
 npm install
 npm start
 ```
-https://github.com/athangk/shop-animate-react/blob/main/video_1.mp4
+https://github.com/athangk/shop-animate-react/video_1.mp4
 
 <video src='https://github.com/athangk/shop-animate-react/blob/main/video_1.mp4' width=180/>
