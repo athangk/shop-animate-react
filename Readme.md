@@ -9,26 +9,25 @@ npm install
 npm start
 ```
 
+#### - Open app, navigate to products
 
-#### - Open app, navigate to products 
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/video_1_gif.gif" width="380">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/gif_1.gif" width="380">
   </p>
 
-
 #### - Navigate to single product
+
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/video_2_gif.gif" width="380">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/gif_2.gif" width="380">
   </p>
   
   #### - Return back to products, use filters
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/video_3_gif.gif" width="380">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/gif_3.gif" width="380">
   </p>
-
 
 #### - Use filters return to categories
-<p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/video_4_gif.gif" width="380">
-  </p>
 
+<p float=left>
+<img src="https://github.com/athangk/shop-animate-react/blob/main/gif_4.gif" width="380">
+  </p>
