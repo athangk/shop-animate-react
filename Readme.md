@@ -31,8 +31,11 @@ npm start
 
 
 *Navigate to categories, choose a category.
-Navigates to Products page, filters with range of price and order ascending descending
-Discount and starting value upon hover
-Navigate to single product with additional delayed result api call
 
-*--Fake API used from public folder.
+*Navigates to Products page, filters with range of price and order ascending descending
+
+*Discount and starting value upon hover
+
+*Navigate to single product with additional delayed result api call
+
+*Fake API used from public folder.
