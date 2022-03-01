@@ -12,22 +12,22 @@ npm start
 #### - Open app, navigate to products
 
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/gif_1.gif" width="380">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/1_gif.gif" width="580">
   </p>
 
 #### - Navigate to single product
 
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/gif_2.gif" width="380">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/2_gif.gif" width="580">
   </p>
   
   #### - Return back to products, use filters
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/gif_3.gif" width="380">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/3_gif.gif" width="580">
   </p>
 
 #### - Use filters return to categories
 
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/gif_4.gif" width="380">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/4_gif.gif" width="580">
   </p>
