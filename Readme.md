@@ -3,9 +3,13 @@
 React, Typescript, Redux toolkit, Material UI (styled components) and Framer motion.
 
 <i>*Navigate to categories, choose a category.</i>
+
 <i>*Navigates to Products page, filters with range of price and order ascending descending</i>
+
 <i>*Discount and starting value upon hover</i>
+
 <i>*Navigate to single product with additional delayed result api call</i>
+
 <i>*Fake API used from public folder.</i>
 
 #### - Open app, navigate to products full cycle
