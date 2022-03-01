@@ -1,4 +1,7 @@
-# Create React App example with TypeScript
+# Categories n products
+React, Typescript, Redux toolkit, Material UI (styled components) and Framer motion.
+
+
 
 ## How to use
 
@@ -12,7 +15,7 @@ npm start
 #### - Open app, navigate to products
 
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/1_gif.gif" width="580">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/4_gif.gif" width="580">
   </p>
 
 #### - Navigate to single product
@@ -29,5 +32,5 @@ npm start
 #### - Use filters return to categories
 
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/4_gif.gif" width="580">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/1_gif.gif" width="580">
   </p>
