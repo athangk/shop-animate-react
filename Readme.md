@@ -25,3 +25,9 @@ npm start
   </p>
   
 
+#### - Homepage navigate to products part 3
+
+<p float=left>
+<img src="https://github.com/athangk/shop-animate-react/blob/main/2_gif.gif" width="580">
+  </p>
+  
