@@ -10,4 +10,4 @@ npm start
 ```
 
 
-<video src='video_1.mp4' width=180/>
+<video src='https://github.com/athangk/shop-animate-react/blob/main/video_1.mp4' width=180/>
