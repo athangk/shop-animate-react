@@ -1,0 +1,279 @@
+[
+  {
+    "id": 9,
+    "title": "2TB Storage Portable ",
+    "subtitle": "External Drive - USB 2.0 ",
+    "price": 64,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "electronics",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 3.3,
+      "count": 203
+    },
+    "discount": 20,
+    "apiData": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 10,
+    "title": "SSD PLUS 1TB ",
+    "subtitle": "SATA8 26 Gb/s",
+    "price": 109,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "electronics",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 2.9,
+      "count": 470
+    },
+    "discount": 18,
+    "apiData": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 11,
+    "title": "256GB SSD ",
+    "subtitle": "SATA 5",
+    "price": 109,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "electronics",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 4.8,
+      "count": 319
+    },
+    "apiData": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 12,
+    "title": "Gaming Drive 2.1",
+    "subtitle": "Best Gaming Drive 2.1",
+    "price": 114,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "electronics",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 4.8,
+      "count": 400
+    },
+    "apiData": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 13,
+    "title": "Monitor 21.5 inches ",
+    "subtitle": "21.5 inches Monitor",
+    "price": 599,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "electronics",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 2.9,
+      "count": 250
+    },
+    "apiData": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 14,
+    "title": "Monitor 49-Inch ",
+    "subtitle": "Best monitor ",
+    "price": 999.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "electronics",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 2.2,
+      "count": 140
+    },
+    "discount": 14
+  },
+  {
+    "id": 5,
+    "title": "Women's TriLegends",
+    "subtitle": "Women's TriLegends Chain",
+    "price": 695,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "jewelery",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 4.6,
+      "count": 400
+    }
+  },
+  {
+    "id": 6,
+    "title": "Solid Gold Stainless Steel Double",
+    "subtitle": "Stainless Steel Double",
+    "price": 168,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "jewelery",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 3.9,
+      "count": 70
+    }
+  },
+  {
+    "id": 7,
+    "title": "White Gold Stainless Steel Double",
+    "subtitle": "Stainless Steel Double",
+    "price": 9.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "jewelery",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 3,
+      "count": 400
+    },
+    "discount": 20
+  },
+  {
+    "id": 8,
+    "title": "Rose Stainless Steel",
+    "subtitle": " Stainless Steel",
+    "price": 10.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "jewelery",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 1.9,
+      "count": 100
+    }
+  },
+  {
+    "id": 1,
+    "title": "Laptop Backpack",
+    "subtitle": "Backpack Laptop",
+    "price": 109.95,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  },
+  {
+    "id": 2,
+    "title": "Mens Casual T-Shirts ",
+    "subtitle": "Slim Fit T-Shirts ",
+    "price": 22.3,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 4.1,
+      "count": 259
+    },
+    "discount": 20
+  },
+  {
+    "id": 3,
+    "title": " Slim Fit Mens Cotton Jacket",
+    "subtitle": " Slim Fit",
+    "price": 55.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 4.7,
+      "count": 500
+    },
+    "discount": 20
+  },
+  {
+    "id": 4,
+    "title": " Slim Fit Mens Casual",
+    "subtitle": " Slim Fit",
+    "price": 15.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 2.1,
+      "count": 430
+    }
+  },
+  {
+    "id": 15,
+    "title": "Women's Jacket Winter Coats",
+    "subtitle": " Jacket Winter Coats",
+    "price": 56.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 2.6,
+      "count": 235
+    },
+    "apiData": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 16,
+    "title": "Jacket 2 Women's Removable ",
+    "subtitle": "Jacket 2 Women's Removable",
+    "price": 29.95,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 2.9,
+      "count": 340
+    },
+    "discount": 20,
+    "apiData": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 17,
+    "title": "Rain Jacket Women",
+    "subtitle": "Jacket Women",
+    "price": 39.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 3.8,
+      "count": 679
+    },
+    "apiData": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 18,
+    "title": "LARGE Women's Short Neck",
+    "subtitle": "Cotton Short",
+    "price": 9.85,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 4.7,
+      "count": 130
+    },
+    "apiData": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 19,
+    "title": "Slim Women's Short Sleeve ",
+    "subtitle": "Cotton Short",
+    "price": 7.95,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 4.5,
+      "count": 146
+    }
+  },
+  {
+    "id": 20,
+    "title": "Slim Womens T Shirt",
+    "subtitle": "Cotton Short",
+    "price": 12.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "rating": {
+      "rate": 3.6,
+      "count": 145
+    },
+    "discount": 20
+  }
+]

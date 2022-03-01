@@ -1,0 +1,38 @@
+[
+  {
+    "description": "best of devices",
+    "excerpt": "best of devices",
+    "id": "electronics",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "slug": "electronics",
+    "title": "electronics",
+    "count": 6
+  },
+  {
+    "description": "most valuable items",
+    "excerpt": "most valuable items",
+    "id": "jewelery",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "slug": "jewelery",
+    "title": "jewelery",
+    "count": 4
+  },
+  {
+    "description": "clothes for him",
+    "excerpt": "clothes for him",
+    "id": "men's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "slug": "men's clothing",
+    "title": "men's clothing",
+    "count": 4
+  },
+  {
+    "description": "clothes for her",
+    "excerpt": "clothes for her",
+    "id": "women's clothing",
+    "image": "https://picsum.photos/500/400?grayscale&blur=2",
+    "slug": "women's clothing",
+    "title": "women's clothing",
+    "count": 6
+  }
+]
