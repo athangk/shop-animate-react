@@ -6,19 +6,19 @@ React, Typescript, Redux toolkit, Material UI (styled components) and Framer mot
 #### - Open app, navigate to products full cycle
 
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/full_gif_v1.gif" width="580">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/full_gif_v1.gif" width="640">
   </p>
 
 #### - Open app, navigate to products, use filters part 1
 
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/5_gif.gif" width="580">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/5_gif.gif" width="640">
   </p>
 
 #### - Homepage navigate to products part 2
 
 <p float=left>
-<img src="https://github.com/athangk/shop-animate-react/blob/main/2_gif.gif" width="580">
+<img src="https://github.com/athangk/shop-animate-react/blob/main/2_gif.gif" width="640">
   </p>
 
 
