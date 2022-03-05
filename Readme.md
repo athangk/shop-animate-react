@@ -1,6 +1,6 @@
 # Categories n products
 
-React, Typescript, Redux toolkit, Material UI (styled components) and Framer motion.
+ReactJS and Typescript using Redux toolkit slice reducers, Material UI styled components and Framer motion.
 
 
 #### - Open app, navigate to products full cycle
