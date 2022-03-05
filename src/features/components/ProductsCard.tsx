@@ -35,63 +35,64 @@ const ProductsCard = (props: ProductCardProps) => {
 
   return (
     <>
-      {props.products.map((product, index) => {
-        return (
-          <Grid item key={`${product.slug}${product.id}${index}`} xs={12} sm={6} md={4}>
-            <StyledCardLink to={"/product/" + product.id}>
-              <CardWrapper>
-                <BoxMotionContainer component="div">
-                  <motion.div
-                    className="product-content overlay"
-                    layoutId={`product-container-${product.id}`}
-                  >
-                    <CardContainer>
-                      <ProductDiscountWrapper>
-                        {product.discount && (
-                          <>
-                            <ProductDiscountOfferLabel />
-                            <ProductDiscountOffer>-{product.discount}%</ProductDiscountOffer>
-                          </>
-                        )}
-                      </ProductDiscountWrapper>
-                      <CardContent>
-                        <CardMedia
-                          component="img"
-                          height="194"
-                          image={product.image}
-                          alt={product.slug}
-                          sx={{
-                            objectFit: "contain",
-                          }}
-                        />
+      {props.products &&
+        props.products.map((product, index) => {
+          return (
+            <Grid item key={`${product.slug}${product.id}${index}`} xs={12} sm={6} md={4}>
+              <StyledCardLink to={"/product/" + product.id}>
+                <CardWrapper>
+                  <BoxMotionContainer component="div">
+                    <motion.div
+                      className="product-content overlay"
+                      layoutId={`product-container-${product.id}`}
+                    >
+                      <CardContainer>
+                        <ProductDiscountWrapper>
+                          {product.discount && (
+                            <>
+                              <ProductDiscountOfferLabel />
+                              <ProductDiscountOffer>-{product.discount}%</ProductDiscountOffer>
+                            </>
+                          )}
+                        </ProductDiscountWrapper>
                         <CardContent>
-                          <TypoTitle variant="h6">{product.title}</TypoTitle>
-                          <BoxPriceContainer>
-                            <TypoPrice variant="h5">{product.price}€</TypoPrice>
-                            {product.discount && (
-                              <TypoDiscountExists variant="body2">
-                                {Literals.card.from}
-                                {discountPrice(product)}€
-                              </TypoDiscountExists>
-                            )}
-                          </BoxPriceContainer>
-                          <TypoSubtitle variant="body2" noWrap={true}>
-                            {product.subtitle}
-                          </TypoSubtitle>
-                          <TypoExcerpt variant="body2">{product.excerpt}</TypoExcerpt>
-                          <Container>
-                            <Rating name="simple-controlled" value={product.rating.rate} />
-                          </Container>
+                          <CardMedia
+                            component="img"
+                            height="194"
+                            image={product.image}
+                            alt={product.slug}
+                            sx={{
+                              objectFit: "contain",
+                            }}
+                          />
+                          <CardContent>
+                            <TypoTitle variant="h6">{product.title}</TypoTitle>
+                            <BoxPriceContainer>
+                              <TypoPrice variant="h5">{product.price}€</TypoPrice>
+                              {product.discount && (
+                                <TypoDiscountExists variant="body2">
+                                  {Literals.card.from}
+                                  {discountPrice(product)}€
+                                </TypoDiscountExists>
+                              )}
+                            </BoxPriceContainer>
+                            <TypoSubtitle variant="body2" noWrap={true}>
+                              {product.subtitle}
+                            </TypoSubtitle>
+                            <TypoExcerpt variant="body2">{product.excerpt}</TypoExcerpt>
+                            <Container>
+                              <Rating name="simple-controlled" value={product.rating.rate} />
+                            </Container>
+                          </CardContent>
                         </CardContent>
-                      </CardContent>
-                    </CardContainer>
-                  </motion.div>
-                </BoxMotionContainer>
-              </CardWrapper>
-            </StyledCardLink>
-          </Grid>
-        )
-      })}
+                      </CardContainer>
+                    </motion.div>
+                  </BoxMotionContainer>
+                </CardWrapper>
+              </StyledCardLink>
+            </Grid>
+          )
+        })}
     </>
   )
 }

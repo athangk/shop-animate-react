@@ -63,7 +63,6 @@ const productsSlice = createSlice({
       state.loading = true
     })
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
-      console.log("the state ", state, action, action.payload.productList)
       productsAdapter.setAll(state, action.payload.productList)
       state.loading = false
     })

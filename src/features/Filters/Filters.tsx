@@ -1,60 +1,50 @@
-import {
-  Grid,
-  Button,
-  Slider,
-  Box,
-  Container,
-  Typography,
-} from "@mui/material";
-import React, { useState } from "react";
-import { Literals } from "../../utilities/literals";
-import { useDispatch, useSelector } from "react-redux";
-import { updateFilters } from "./FiltersSlice";
-import { FilterData } from "../../models/IModelsData";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { selectFilters } from "./FiltersSlice";
+import { Grid, Button, Slider, Box, Container, Typography } from "@mui/material"
+import React, { useState } from "react"
+import { Literals } from "../../utilities/literals"
+import { useDispatch, useSelector } from "react-redux"
+import { updateFilters } from "./FiltersSlice"
+import { FilterData } from "../../models/IModelsData"
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
+import { selectFilters } from "./FiltersSlice"
 
 const Filters = () => {
-  const dispatch = useDispatch();
-  const filtersState = useSelector(selectFilters);
-  const [order, setOrder] = useState<string>(filtersState.order);
-  const [range, setRange] = React.useState<number[]>([
-    filtersState.rangeMin,
-    filtersState.rangeMax,
-  ]);
+  const dispatch = useDispatch()
+  const filtersState = useSelector(selectFilters)
+  const [order, setOrder] = useState<string>(filtersState.order)
+  const [range, setRange] = React.useState<number[]>([filtersState.rangeMin, filtersState.rangeMax])
 
   const handleSliderChange = (event: Event, newValue: number | number[]) => {
-    setRange(newValue as number[]);
-  };
+    setRange(newValue as number[])
+  }
 
   const handleSliderChangeCommitted = () => {
     let filterData: FilterData = {
       order,
       rangeMin: range[0],
       rangeMax: range[1],
-    };
-    dispatch(updateFilters(filterData));
-  };
+    }
+    dispatch(updateFilters(filterData))
+  }
 
   const handleSortChange = (type: string) => {
     let filterData: FilterData = {
       order: type,
       rangeMin: range[0],
       rangeMax: range[1],
-    };
-    setOrder(type);
-    dispatch(updateFilters(filterData));
-  };
+    }
+    setOrder(type)
+    dispatch(updateFilters(filterData))
+  }
 
   const sortByPrice = (type: string) => {
-    let filterData = { order: type, rangeMin: 0, rangeMax: 1000 };
-    setOrder(type);
-    dispatch(updateFilters(filterData));
-  };
+    let filterData = { order: type, rangeMin: 0, rangeMax: 1000 }
+    setOrder(type)
+    dispatch(updateFilters(filterData))
+  }
 
   function valuetext(value: number) {
-    return `${value}°E`;
+    return `${value}°E`
   }
 
   return (
@@ -80,13 +70,7 @@ const Filters = () => {
         </Box>
       </Grid>
       <Grid item md={6}>
-        <Grid
-          container
-          md={12}
-          spacing={2}
-          justifyContent="end"
-          alignItems="center"
-        >
+        <Grid container spacing={2} justifyContent="end" alignItems="center">
           <Grid item md={2}>
             <Typography color="secondary">Order:</Typography>
           </Grid>
@@ -113,7 +97,7 @@ const Filters = () => {
         </Grid>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default Filters;
+export default Filters

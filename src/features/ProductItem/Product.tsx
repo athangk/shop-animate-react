@@ -39,13 +39,11 @@ const ProductItem = (props?: ProductItemProps) => {
         .then((res) => {
           return res.data.find((item: ProductData) => parseInt(item.id) === parseInt(productId!))
         })
-      console.log("the inside productList", productList)
-      console.log("before sleep")
+
       await sleep(1200)
       setProduct(productList)
       setCurrentProduct(productList)
       setStatus(true)
-      console.log("after sleep", productList)
     }
     if (product == null) {
       setStatus(false)
@@ -67,7 +65,7 @@ const ProductItem = (props?: ProductItemProps) => {
       {currentProduct && (
         <React.Fragment>
           <Container disableGutters maxWidth="xl" component="section">
-            <Grid spacing={2} mb={2}>
+            <Grid container spacing={2} mb={2}>
               <Grid item md={2}>
                 <motion.div className="single" initial="exit" animate="enter" exit="exit">
                   <motion.div className="back" variants={backVariants}>
@@ -77,62 +75,70 @@ const ProductItem = (props?: ProductItemProps) => {
               </Grid>
             </Grid>
           </Container>
-          <Grid container spacing={2} alignItems="stretch">
-            <React.Fragment>
-              <Grid item key={`${currentProduct!.slug}${currentProduct!.id}-title`} xs="auto" md={12}>
-                <Typography variant="h2">{currentProduct.title}</Typography>
-              </Grid>
-              <TitleGridItem item key={`${currentProduct!.slug}${currentProduct!.id}`} xs="auto" md={6}>
-                <>
-                  <AnimatePresence>
-                    <div className="product-content-container open">
-                      <motion.div
-                        className="product-content"
-                        layoutId={`product-container-${currentProduct.id}`}
-                      >
+          {currentProduct != null && (
+            <Grid container spacing={2} alignItems="stretch">
+              <React.Fragment>
+                <Grid item key={`${currentProduct!.slug}${currentProduct!.id}-title`} xs="auto" md={12}>
+                  <Typography variant="h2">{currentProduct.title}</Typography>
+                </Grid>
+                <TitleGridItem
+                  item
+                  key={`product-${currentProduct!.slug}${currentProduct!.id}`}
+                  xs="auto"
+                  md={6}
+                >
+                  <>
+                    <AnimatePresence>
+                      <div className="product-content-container open">
                         <motion.div
-                          className="title-container"
-                          layoutId={`title-container-${currentProduct.id}`}
-                          initial={{ opacity: 1 }}
-                          animate={{ opacity: 1 }}
-                          exit={{
-                            opacity: 1,
-                            transition: { duration: 1 },
-                          }}
-                          transition={{ duration: 1, delay: 0 }}
-                          style={{ pointerEvents: "auto" }}
+                          className="product-content"
+                          layoutId={`product-container-${currentProduct.id}`}
                         >
-                          <Card>
-                            <CardHeaderProduct></CardHeaderProduct>
-                            <CardContent>
-                              <MediaBoxContainer>
-                                <CardMedia
-                                  component="img"
-                                  height="100%"
-                                  image={currentProduct.image}
-                                  alt={currentProduct.slug}
-                                  sx={{
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </MediaBoxContainer>
-                            </CardContent>
-                          </Card>
+                          <motion.div
+                            className="title-container"
+                            layoutId={`title-container-${currentProduct.id}`}
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
+                            exit={{
+                              opacity: 1,
+                              transition: { duration: 1 },
+                            }}
+                            transition={{ duration: 1, delay: 0 }}
+                            style={{ pointerEvents: "auto" }}
+                          >
+                            <Card>
+                              <CardHeaderProduct></CardHeaderProduct>
+                              <CardContent>
+                                <MediaBoxContainer>
+                                  <CardMedia
+                                    component="img"
+                                    height="100%"
+                                    image={currentProduct.image}
+                                    alt={currentProduct.slug}
+                                    sx={{
+                                      objectFit: "contain",
+                                    }}
+                                  />
+                                </MediaBoxContainer>
+                              </CardContent>
+                            </Card>
+                          </motion.div>
                         </motion.div>
-                      </motion.div>
-                    </div>
-                  </AnimatePresence>
-                </>
-              </TitleGridItem>
-              <Grid item key={`${currentProduct.slug}${currentProduct.id}`} md={6}>
-                <ProductDetails product={currentProduct} />
-              </Grid>
-              <Grid item key={`${currentProduct.slug}${currentProduct.id}`} md={12}>
-                {status && <SingleProductApiDetails product={currentProduct} />}
-                {!status && <CircularProgress color="secondary" />}
-              </Grid>
-            </React.Fragment>
-          </Grid>
+                      </div>
+                    </AnimatePresence>
+                  </>
+                </TitleGridItem>
+
+                <Grid item key={`product-details-${currentProduct.slug}${currentProduct.id}`} md={6}>
+                  <ProductDetails product={currentProduct} />
+                </Grid>
+                <Grid item key={`product-api-details-${currentProduct.slug}${currentProduct.id}`} md={12}>
+                  {status && <SingleProductApiDetails product={currentProduct} />}
+                  {!status && <CircularProgress color="secondary" />}
+                </Grid>
+              </React.Fragment>
+            </Grid>
+          )}
         </React.Fragment>
       )}
     </Container>

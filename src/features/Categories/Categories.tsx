@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useMemo } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { fetchCategories, selectCategoriesList, selectLoading } from "./CategoriesSlice"
 import Grid from "@mui/material/Grid"

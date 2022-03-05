@@ -21,9 +21,8 @@ const filtersSlice = createSlice({
   reducers: {
     updateFilters(state, action: PayloadAction<FilterData>) {
       const updatedFilters = action.payload
-      console.log("before ", state, action.payload)
+
       state.filters = { ...state.filters, ...updatedFilters }
-      console.log("after", state.filters)
     },
   },
 })

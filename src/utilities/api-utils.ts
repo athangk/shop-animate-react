@@ -3,7 +3,6 @@ import { ProductData, CategoryData } from "../models/IModelsData"
 
 export const getCategoryImages = (productList: AxiosResponse[]) => {
   const imageList = productList.map((item) => {
-    console.log(item.data)
     return item.data[0].image
   })
   return imageList
