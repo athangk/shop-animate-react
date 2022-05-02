@@ -42,10 +42,7 @@ const ProductsCard = (props: ProductCardProps) => {
               <StyledCardLink to={"/product/" + product.id}>
                 <CardWrapper>
                   <BoxMotionContainer component="div">
-                    <motion.div
-                      className="product-content overlay"
-                      layoutId={`product-container-${product.id}`}
-                    >
+                    <motion.div layoutId={`product-container-${product.id}`}>
                       <CardContainer>
                         <ProductDiscountWrapper>
                           {product.discount && (

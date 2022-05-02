@@ -46,8 +46,8 @@ const Products = () => {
       <PagesMainContainer maxWidth="md" component="main">
         <Grid container spacing={2} mb={2}>
           <Grid item md={2}>
-            <motion.div className="single" initial="exit" animate="enter" exit="exit">
-              <motion.div className="back" variants={backVariants}>
+            <motion.div initial="exit" animate="enter" exit="exit">
+              <motion.div variants={backVariants}>
                 <NavigateBackLink to="/">← Back</NavigateBackLink>
               </motion.div>
             </motion.div>
@@ -58,33 +58,30 @@ const Products = () => {
             {category && (
               <AnimatePresence>
                 <Fragment>
-                  <div className="card-content-container open">
-                    <motion.div className="card-content" layoutId={`card-container-${params.categoryId}`}>
-                      <motion.div
-                        className="title-container"
-                        layoutId={`title-container-${params.categoryId}`}
-                        initial={{ width: "60%" }}
-                        animate={{ width: "100%" }}
-                        exit={{
-                          width: "100%",
-                          transition: { duration: 0.15 },
-                        }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        style={{ pointerEvents: "auto" }}
-                      >
-                        <Grid container spacing={2}>
-                          <Grid item xs={12}>
-                            <Card>
-                              <CardHeaderTitle
-                                title={category.title}
-                                titleTypographyProps={{ align: "center" }}
-                              />
-                            </Card>
-                          </Grid>
+                  <motion.div layoutId={`card-container-${params.categoryId}`}>
+                    <motion.div
+                      layoutId={`title-container-${params.categoryId}`}
+                      initial={{ width: "60%" }}
+                      animate={{ width: "100%" }}
+                      exit={{
+                        width: "100%",
+                        transition: { duration: 0.15 },
+                      }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                      style={{ pointerEvents: "auto" }}
+                    >
+                      <Grid container spacing={2}>
+                        <Grid item xs={12}>
+                          <Card>
+                            <CardHeaderTitle
+                              title={category.title}
+                              titleTypographyProps={{ align: "center" }}
+                            />
+                          </Card>
                         </Grid>
-                      </motion.div>
+                      </Grid>
                     </motion.div>
-                  </div>
+                  </motion.div>
                 </Fragment>
               </AnimatePresence>
             )}

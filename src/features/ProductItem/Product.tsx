@@ -67,8 +67,8 @@ const ProductItem = (props?: ProductItemProps) => {
           <Container disableGutters maxWidth="xl" component="section">
             <Grid container spacing={2} mb={2}>
               <Grid item md={2}>
-                <motion.div className="single" initial="exit" animate="enter" exit="exit">
-                  <motion.div className="back" variants={backVariants}>
+                <motion.div initial="exit" animate="enter" exit="exit">
+                  <motion.div variants={backVariants}>
                     <NavigateBackLink to={`/products/${currentProduct.category}`}>← Back</NavigateBackLink>
                   </motion.div>
                 </motion.div>
@@ -89,42 +89,36 @@ const ProductItem = (props?: ProductItemProps) => {
                 >
                   <>
                     <AnimatePresence>
-                      <div className="product-content-container open">
+                      <motion.div layoutId={`product-container-${currentProduct.id}`}>
                         <motion.div
-                          className="product-content"
-                          layoutId={`product-container-${currentProduct.id}`}
+                          layoutId={`title-container-${currentProduct.id}`}
+                          initial={{ opacity: 1 }}
+                          animate={{ opacity: 1 }}
+                          exit={{
+                            opacity: 1,
+                            transition: { duration: 1 },
+                          }}
+                          transition={{ duration: 1, delay: 0 }}
+                          style={{ pointerEvents: "auto" }}
                         >
-                          <motion.div
-                            className="title-container"
-                            layoutId={`title-container-${currentProduct.id}`}
-                            initial={{ opacity: 1 }}
-                            animate={{ opacity: 1 }}
-                            exit={{
-                              opacity: 1,
-                              transition: { duration: 1 },
-                            }}
-                            transition={{ duration: 1, delay: 0 }}
-                            style={{ pointerEvents: "auto" }}
-                          >
-                            <Card>
-                              <CardHeaderProduct></CardHeaderProduct>
-                              <CardContent>
-                                <MediaBoxContainer>
-                                  <CardMedia
-                                    component="img"
-                                    height="100%"
-                                    image={currentProduct.image}
-                                    alt={currentProduct.slug}
-                                    sx={{
-                                      objectFit: "contain",
-                                    }}
-                                  />
-                                </MediaBoxContainer>
-                              </CardContent>
-                            </Card>
-                          </motion.div>
+                          <Card>
+                            <CardHeaderProduct></CardHeaderProduct>
+                            <CardContent>
+                              <MediaBoxContainer>
+                                <CardMedia
+                                  component="img"
+                                  height="100%"
+                                  image={currentProduct.image}
+                                  alt={currentProduct.slug}
+                                  sx={{
+                                    objectFit: "contain",
+                                  }}
+                                />
+                              </MediaBoxContainer>
+                            </CardContent>
+                          </Card>
                         </motion.div>
-                      </div>
+                      </motion.div>
                     </AnimatePresence>
                   </>
                 </TitleGridItem>

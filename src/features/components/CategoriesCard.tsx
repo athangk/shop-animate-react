@@ -19,7 +19,6 @@ const CategoriesCard = (props: CategoriesCardProps) => {
             <StyledCardLink to={"/products/" + category.id}>
               <CardContainer>
                 <motion.div
-                  className="card-content overlay"
                   layoutId={`card-container-${category.id}`}
                   exit={{ transition: { duration: 0.15 } }}
                   transition={{ duration: 0, delay: 0.15 }}
