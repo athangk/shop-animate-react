@@ -1,4 +1,4 @@
-import { CardHeader, Container } from "@mui/material"
+import { CardHeader, Container, Box } from "@mui/material"
 import { styled } from "@mui/system"
 
 export const CardHeaderTitle = styled(CardHeader)(({ theme }) => ({

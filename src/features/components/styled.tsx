@@ -133,3 +133,7 @@ export const NavigateBackLink = styled(Link)(({ theme }) => ({
   textTransform: "uppercase",
   fontSize: 20,
 }))
+
+export const CommonWrapper = styled(Box)(({ theme }) => ({
+  margin: theme.spacing(4),
+}))

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useState, useEffect, Fragment } from "react"
 import { useParams } from "react-router-dom"
 import Grid from "@mui/material/Grid"
+import Box from "@mui/material/Box"
 import CircularProgress from "@mui/material/CircularProgress"
 import ProductsCard from "../components/ProductsCard"
 import { AnimatePresence, motion } from "framer-motion"
@@ -12,8 +13,8 @@ import { fetchCategories, selectCategoriesById } from "../Categories/CategoriesS
 import { RootState } from "../../store"
 import Filters from "../Filters/Filters"
 import { usePrevious } from "../../hooks"
-import { CardHeaderTitle, ContainerLoader } from "./components"
-import { PagesMainContainer, NavigateBackLink } from "../components/styled"
+import { CardHeaderTitle, ContainerLoader } from "./styled"
+import { PagesMainContainer, NavigateBackLink, CommonWrapper } from "../components/styled"
 
 const transition = {
   duration: 1,
@@ -53,50 +54,49 @@ const Products = () => {
             </motion.div>
           </Grid>
         </Grid>
-        <Grid container spacing={2} mb={2}>
-          <Grid item md={12}>
-            {category && (
-              <AnimatePresence>
-                <Fragment>
-                  <motion.div layoutId={`card-container-${params.categoryId}`}>
-                    <motion.div
-                      layoutId={`title-container-${params.categoryId}`}
-                      initial={{ width: "60%" }}
-                      animate={{ width: "100%" }}
-                      exit={{
-                        width: "100%",
-                        transition: { duration: 0.15 },
-                      }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                      style={{ pointerEvents: "auto" }}
-                    >
-                      <Grid container spacing={2}>
-                        <Grid item xs={12}>
-                          <Card>
-                            <CardHeaderTitle
-                              title={category.title}
-                              titleTypographyProps={{ align: "center" }}
-                            />
-                          </Card>
-                        </Grid>
+        <CommonWrapper>
+          {category && (
+            <AnimatePresence>
+              <Fragment>
+                <motion.div layoutId={`card-container-${params.categoryId}`}>
+                  <motion.div
+                    layoutId={`title-container-${params.categoryId}`}
+                    initial={{ width: "60%" }}
+                    animate={{ width: "100%" }}
+                    exit={{
+                      width: "100%",
+                      transition: { duration: 0.15 },
+                    }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    style={{ pointerEvents: "auto" }}
+                  >
+                    <Grid container spacing={2}>
+                      <Grid item xs={12}>
+                        <Card>
+                          <CardHeaderTitle
+                            title={category.title}
+                            titleTypographyProps={{ align: "center" }}
+                          />
+                        </Card>
                       </Grid>
-                    </motion.div>
+                    </Grid>
                   </motion.div>
-                </Fragment>
-              </AnimatePresence>
-            )}
-          </Grid>
-        </Grid>
-        <Filters></Filters>
+                </motion.div>
+              </Fragment>
+            </AnimatePresence>
+          )}
+        </CommonWrapper>
+        <Filters />
         {loading && (
           <ContainerLoader maxWidth="md">
             <CircularProgress color="secondary" />
           </ContainerLoader>
         )}
-
-        <Grid container spacing={5} alignItems="flex-end">
-          {!loading && products.length > 0 && <ProductsCard products={products}></ProductsCard>}
-        </Grid>
+        <CommonWrapper>
+          <Grid container spacing={5} alignItems="flex-end">
+            {!loading && products.length > 0 && <ProductsCard products={products}></ProductsCard>}
+          </Grid>
+        </CommonWrapper>
       </PagesMainContainer>
     </>
   )

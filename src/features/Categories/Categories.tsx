@@ -6,7 +6,13 @@ import Container from "@mui/material/Container"
 import CategoriesCard from "../components/CategoriesCard"
 import { CircularProgress } from "@mui/material"
 import { Literals } from "../../utilities/literals"
-import { CategoriesHeaderWrapper, CategoryHeader, CategoriesGridWrapper, LoaderContainer } from "./styled"
+import {
+  CategoriesHeaderWrapper,
+  CategoryHeader,
+  CategoriesGridWrapper,
+  LoaderContainer,
+  CategoriesWrapper,
+} from "./styled"
 import { PagesMainContainer } from "../components/styled"
 
 const Categories = () => {
@@ -30,16 +36,16 @@ const Categories = () => {
         <CategoriesHeaderWrapper component="h1">{Literals.categories}</CategoriesHeaderWrapper>
       </Container>
       <CategoryHeader />
-      <CategoriesGridWrapper maxWidth="xl">
+      <CategoriesWrapper>
         {categories.length == 0 && (
           <LoaderContainer maxWidth="md">
             <CircularProgress color="secondary" />
           </LoaderContainer>
         )}
-        <Grid container spacing={5} alignItems="flex-end">
+        <Grid container spacing={5} alignItems="center" justifyContent="center">
           {categories.length > 0 && <CategoriesCard categories={categories}></CategoriesCard>}
         </Grid>
-      </CategoriesGridWrapper>
+      </CategoriesWrapper>
     </PagesMainContainer>
   )
 }
