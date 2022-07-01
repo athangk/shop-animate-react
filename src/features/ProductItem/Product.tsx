@@ -1,5 +1,6 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
@@ -8,7 +9,6 @@ import { Card, CardContent, CardMedia, CircularProgress } from '@mui/material';
 import { selectProductById } from '../Products/ProductsSlice';
 import { RootState } from '../../store';
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { ProductData } from '../../models/IModelsData';
 import { sleep } from '../../utilities/api-utils';
 import SingleProductApiDetails from './SingleProductApiDetails';
@@ -22,7 +22,6 @@ interface ProductItemProps {
 
 const ProductItem = (props?: ProductItemProps) => {
   const params = useParams();
-  const dispatch = useDispatch();
   const productId = params.productId ? params.productId : props?.productId;
   const reduxProduct = useSelector((state: RootState) =>
     selectProductById(state, productId!)
