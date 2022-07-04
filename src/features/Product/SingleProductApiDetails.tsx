@@ -7,9 +7,7 @@ interface ProductCardDetailsProps {
   product: ProductData;
 }
 
-const SingleProductApiDetails: React.FC<ProductCardDetailsProps> = ({
-  product,
-}) => {
+const SingleProductApiDetails = ({ product }: ProductCardDetailsProps) => {
   return (
     <CommonWrapper>
       <Card>

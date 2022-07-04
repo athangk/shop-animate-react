@@ -23,7 +23,7 @@ import { CardHeaderTitle, ContainerLoader } from './styled';
 import { CommonWrapper } from '../components/styled';
 import BackButton from '../components/BackButton';
 
-const Products: React.FC = () => {
+const Products = () => {
   const params = useParams();
   const dispatch = useDispatch();
   const products = useSelector(selectProductsList);

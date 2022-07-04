@@ -15,7 +15,7 @@ interface CategoriesCardProps {
   categories: CategoryData[];
 }
 
-const CategoriesCard: React.FC<CategoriesCardProps> = ({ categories }) => {
+const CategoriesCard = ({ categories }: CategoriesCardProps) => {
   return (
     <>
       {categories.map((category) => {

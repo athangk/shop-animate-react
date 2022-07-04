@@ -24,7 +24,7 @@ interface BackButtonProps {
   navigate: string;
 }
 
-const BackButton: React.FC<BackButtonProps> = ({ navigate }) => {
+const BackButton = ({ navigate }: BackButtonProps) => {
   const backTo = navigate === 'home' ? '/' : navigate;
   return (
     <motion.div initial='exit' animate='enter' exit='exit'>

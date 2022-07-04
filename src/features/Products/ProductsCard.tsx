@@ -24,7 +24,7 @@ interface ProductCardProps {
   products: ProductData[];
 }
 
-const ProductsCard: React.FC<ProductCardProps> = ({ products }) => {
+const ProductsCard = ({ products }: ProductCardProps) => {
   const discountPrice = (product: ProductData) => {
     return Math.ceil((product.price / (product.discount - 100)) * 100);
   };

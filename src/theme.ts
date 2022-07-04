@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
+import { m } from 'framer-motion';
 
 declare module '@mui/material/styles' {
   interface Theme {
@@ -53,8 +54,14 @@ const theme = createTheme({
     h1: {
       fontSize: '2rem',
     },
+    h2: {
+      fontSize: '1.5rem',
+    },
     h3: {
       fontSize: '1.375rem',
+    },
+    h4: {
+      fontSize: '1.125rem',
     },
     h5: {
       textAlign: 'center',

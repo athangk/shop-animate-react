@@ -20,7 +20,7 @@ interface ProductProps {
   productId?: string;
 }
 
-const Product: React.FC<ProductProps> = ({ productId }) => {
+const Product = ({ productId }: ProductProps) => {
   const params = useParams();
   const productIdentifier = params.productId ? params.productId : productId;
   const reduxProduct = useSelector((state: RootState) =>

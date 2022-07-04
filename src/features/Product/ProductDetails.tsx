@@ -20,7 +20,7 @@ interface ProductCardDetailsProps {
   product: ProductData;
 }
 
-const ProductDetails: React.FC<ProductCardDetailsProps> = ({ product }) => {
+const ProductDetails = ({ product }: ProductCardDetailsProps) => {
   return (
     <ProductCardDetails>
       <CardContent>

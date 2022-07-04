@@ -8,7 +8,7 @@ import { Box, CircularProgress, Divider } from '@mui/material';
 import { Literals } from '../../utilities/literals';
 import { CategoriesHeaderWrapper, LoaderContainer } from './styled';
 
-const Categories: React.FC = () => {
+const Categories = () => {
   const dispatch = useDispatch();
   const categories = useSelector(selectCategoriesList);
 
