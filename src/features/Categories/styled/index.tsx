@@ -1,35 +1,18 @@
-import { styled } from "@mui/system"
-import { Typography, Container, Box, Grid } from "@mui/material"
-
-export const CategoryHeader = styled(Typography)(({ theme }) => ({
-  borderBottom: "1px solid #278e8b",
-  lineHeight: "2",
-  marginBottom: theme.spacing(4),
-}))
+import { styled } from '@mui/system';
+import { Container, Box } from '@mui/material';
 
 export const LoaderContainer = styled(Container)(({ theme }) => ({
   marginTop: theme.spacing(5),
-  justifyContent: "center",
-  alignItems: "center",
-  display: "flex",
-}))
-
-export const CategoriesGridWrapper = styled(Container)(({ theme }) => ({
-  perspective: 800,
-  marginBottom: theme.spacing(1.5),
-  paddingBottom: theme.spacing(0.5),
-  marginTop: theme.spacing(5),
-}))
+  justifyContent: 'center',
+  alignItems: 'center',
+  display: 'flex',
+}));
 
 export const CategoriesHeaderWrapper = styled(Box)(({ theme }) => ({
-  alignText: "center",
+  alignText: 'center',
   marginTop: theme.spacing(3.75),
   paddingBottom: theme.spacing(0.75),
   color: theme.palette.secondary.dark,
-  minWidth: "100%",
+  minWidth: '100%',
   marginBottom: 0,
-}))
-
-export const CategoriesWrapper = styled(Grid)(({ theme }) => ({
-  margin: theme.spacing(4),
-}))
+}));

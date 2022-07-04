@@ -17,7 +17,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { CommonWrapper } from '../components/styled';
 
-const Filters = () => {
+const Filters: React.FC = () => {
   const dispatch = useDispatch();
   const filtersState = useSelector(selectFilters);
   const [order, setOrder] = useState<string>(filtersState.order);

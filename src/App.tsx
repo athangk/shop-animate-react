@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Categories from './features/Categories/Categories';
 import { Routes, Route } from 'react-router-dom';
-import Product from './features/ProductItem/Product';
+import Product from './features/Product/Product';
 import Products from './features/Products/Products';
 import { Box, styled } from '@mui/material';
 

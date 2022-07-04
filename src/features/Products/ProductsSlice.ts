@@ -1,97 +1,110 @@
-import { createAsyncThunk, createSlice, createEntityAdapter, createSelector } from "@reduxjs/toolkit"
-import axios from "axios"
-import { ProductData, FilterData } from "../../models/IModelsData"
-import { RootState } from "../../store"
-import { sleep } from "../../utilities/api-utils"
-import { selectFilters } from "../Filters/FiltersSlice"
-import faker from "@faker-js/faker"
+import {
+  createAsyncThunk,
+  createSlice,
+  createEntityAdapter,
+  createSelector,
+} from '@reduxjs/toolkit';
+import axios from 'axios';
+import { ProductData } from '../../models/IModelsData';
+import { RootState } from '../../store';
+import { sleep } from '../../utilities/api-utils';
+import { selectFilters } from '../Filters/FiltersSlice';
 
-type product = ProductData
+type product = ProductData;
 
 const productsAdapter = createEntityAdapter<product>({
   selectId: (product) => product.id,
   sortComparer: (a, b) => a.title.localeCompare(b.title),
-})
+});
 
-export const fetchProducts = createAsyncThunk("products/getProducts", async (category: string) => {
-  await sleep(1200)
+export const fetchProducts = createAsyncThunk(
+  'products/getProducts',
+  async (category: string) => {
+    await sleep(1200);
 
-  const productList = await axios.get(`http://localhost:3000/api-back-up/all-products.json`).then((res) => {
-    return res.data.filter((item: ProductData) => item.category === category)
-  })
+    const productList = await axios
+      .get(`http://localhost:3000/api-back-up/all-products.json`)
+      .then((res) => {
+        return res.data.filter(
+          (item: ProductData) => item.category === category
+        );
+      });
 
-  let categoryData = {
-    noData: true,
+    let categoryData = {
+      noData: true,
+    };
+
+    const response = { productList, categoryData };
+
+    return response;
   }
+);
 
-  const response = { productList, categoryData }
+export const fetchSingleProduct = createAsyncThunk(
+  'products/getSingleProduct',
+  async (id: string) => {
+    await sleep(1200);
 
-  return response
-})
+    const productList = await axios
+      .get(`http://localhost:3000/api-back-up/all-products.json`)
+      .then((res) => {
+        return res.data.filter(
+          (item: ProductData) => parseInt(item.id) === parseInt(id)
+        );
+      });
 
-export const fetchSingleProduct = createAsyncThunk("products/getSingleProduct", async (id: string) => {
-  await sleep(1200)
+    let categoryData = {
+      noData: true,
+    };
 
-  const productList = await axios.get(`http://localhost:3000/api-back-up/all-products.json`).then((res) => {
-    return res.data.filter((item: ProductData) => parseInt(item.id) === parseInt(id))
-  })
+    const response = { productList, categoryData };
 
-  let categoryData = {
-    noData: true,
+    return response;
   }
+);
 
-  const response = { productList, categoryData }
-
-  return response
-})
-
-const categoryData = {
-  products_count: 0,
-  price_min: 100,
-  price_max: 10000,
-}
-
-// productsSlice only for the createAsyncThunk result
 const productsSlice = createSlice({
-  name: "products",
+  name: 'products',
   initialState: productsAdapter.getInitialState({
     loading: true,
   }),
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchProducts.pending, (state) => {
-      state.loading = true
-    })
+      state.loading = true;
+    });
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
-      productsAdapter.setAll(state, action.payload.productList)
-      state.loading = false
-    })
+      productsAdapter.setAll(state, action.payload.productList);
+      state.loading = false;
+    });
     builder.addCase(fetchProducts.rejected, (state) => {
-      state.loading = false
-    })
+      state.loading = false;
+    });
   },
-})
+});
 
 // setup of selectors
-export const selectLoading = (state: RootState) => state.products.loading
+export const selectLoading = (state: RootState) => state.products.loading;
 
-export const { selectAll: selectProducts, selectById: selectProductById } = productsAdapter.getSelectors(
-  (state: RootState) => state.products
-)
+export const { selectAll: selectProducts, selectById: selectProductById } =
+  productsAdapter.getSelectors((state: RootState) => state.products);
 
-export const selectProductsList = createSelector([selectProducts, selectFilters], (products, filters) => {
-  const currentProds = products.filter((item) => {
-    return item.price > filters.rangeMin && item.price <= filters.rangeMax
-  })
+export const selectProductsList = createSelector(
+  [selectProducts, selectFilters],
+  (products, filters) => {
+    const currentProds = products.filter((item) => {
+      return item.price > filters.rangeMin && item.price <= filters.rangeMax;
+    });
 
-  currentProds.sort((a, b) => {
-    if (filters.order === "asc") {
-      return a.price - b.price
-    } else {
-      return b.price - a.price
-    }
-  })
-  return currentProds
-})
+    currentProds.sort((a, b) => {
+      if (filters.order === 'asc') {
+        return a.price - b.price;
+      } else {
+        return b.price - a.price;
+      }
+    });
+    return currentProds;
+  }
+);
 
-export default productsSlice.reducer
+export default productsSlice.reducer;

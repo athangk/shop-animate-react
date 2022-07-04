@@ -13,18 +13,18 @@ import { ProductData } from '../../models/IModelsData';
 import { sleep } from '../../utilities/api-utils';
 import SingleProductApiDetails from './SingleProductApiDetails';
 import ProductDetails from './ProductDetails';
-import { TitleGridItem, CardHeaderProduct, MediaBoxContainer } from './styled';
-import { NavigateBackLink } from '../components/styled';
+import { TitleGridItem, MediaBoxContainer } from './styled';
+import BackButton from '../components/BackButton';
 
-interface ProductItemProps {
+interface ProductProps {
   productId?: string;
 }
 
-const ProductItem = (props?: ProductItemProps) => {
+const Product: React.FC<ProductProps> = ({ productId }) => {
   const params = useParams();
-  const productId = params.productId ? params.productId : props?.productId;
+  const productIdentifier = params.productId ? params.productId : productId;
   const reduxProduct = useSelector((state: RootState) =>
-    selectProductById(state, productId!)
+    selectProductById(state, productIdentifier!)
   );
   const [status, setStatus] = useState<boolean>(false);
 
@@ -39,7 +39,8 @@ const ProductItem = (props?: ProductItemProps) => {
         .get(`http://localhost:3000/api-back-up/all-products.json`)
         .then((res) => {
           return res.data.find(
-            (item: ProductData) => parseInt(item.id) === parseInt(productId!)
+            (item: ProductData) =>
+              parseInt(item.id) === parseInt(productIdentifier!)
           );
         });
 
@@ -54,44 +55,27 @@ const ProductItem = (props?: ProductItemProps) => {
     }
   }, [product]);
 
-  const transition = {
-    duration: 1,
-    ease: [0.43, 0.13, 0.23, 0.96],
-  };
-  const backVariants = {
-    exit: { x: 100, opacity: 0, transition },
-    enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } },
-  };
-
   return (
     <Container maxWidth='md' component='main' sx={{ pt: 4 }}>
       {currentProduct && (
-        <React.Fragment>
+        <>
           <Container disableGutters maxWidth='xl' component='section'>
             <Grid container spacing={2} mb={2}>
               <Grid item md={2}>
-                <motion.div initial='exit' animate='enter' exit='exit'>
-                  <motion.div variants={backVariants}>
-                    <NavigateBackLink
-                      to={`/products/${currentProduct.category}`}
-                    >
-                      ← Back
-                    </NavigateBackLink>
-                  </motion.div>
-                </motion.div>
+                <BackButton navigate={`/products/${currentProduct.category}`} />
               </Grid>
             </Grid>
           </Container>
           {currentProduct != null && (
             <Grid container spacing={2} alignItems='stretch'>
-              <React.Fragment>
+              <>
                 <Grid
                   item
                   key={`${currentProduct!.slug}${currentProduct!.id}-title`}
                   xs='auto'
                   md={12}
                 >
-                  <Typography variant='h2'>{currentProduct.title}</Typography>
+                  <Typography variant='h1'>{currentProduct.title}</Typography>
                 </Grid>
                 <TitleGridItem
                   item
@@ -116,7 +100,6 @@ const ProductItem = (props?: ProductItemProps) => {
                           style={{ pointerEvents: 'auto' }}
                         >
                           <Card>
-                            <CardHeaderProduct></CardHeaderProduct>
                             <CardContent>
                               <MediaBoxContainer>
                                 <CardMedia
@@ -154,13 +137,13 @@ const ProductItem = (props?: ProductItemProps) => {
                   )}
                   {!status && <CircularProgress color='secondary' />}
                 </Grid>
-              </React.Fragment>
+              </>
             </Grid>
           )}
-        </React.Fragment>
+        </>
       )}
     </Container>
   );
 };
 
-export default ProductItem;
+export default Product;
