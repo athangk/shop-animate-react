@@ -1,6 +1,6 @@
 # Categories n products
 
-ReactJS and Typescript using Redux toolkit slice reducers, Material UI styled components and Framer motion.
+Animated responsive e shop with ReactJS, Typescript, Redux toolkit, slice reducers, Material UI styled components and Framer motion.
 
 
 #### - Open app, navigate to products full cycle
