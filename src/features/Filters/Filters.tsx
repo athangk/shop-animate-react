@@ -16,6 +16,7 @@ import { selectFilters } from './FiltersSlice';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { CommonWrapper } from '../components/styled';
+import { Literals } from '../../utilities/literals';
 
 const Filters = () => {
   const dispatch = useDispatch();
@@ -54,11 +55,11 @@ const Filters = () => {
   return (
     <CommonWrapper>
       <Grid container mb={2} direction={mobile ? 'column' : 'row'}>
-        <Grid item md={6} sm={12}>
+        <Grid item md={6} sm={12} alignItems='center'>
           <Box ml={2}>
-            <Container sx={{ display: 'flex', alignItems: 'center' }}>
+            <Box alignItems='center'>
               <Typography mr={4} color='secondary'>
-                Range:
+                {Literals.range}
               </Typography>
               <Slider
                 value={range}
@@ -71,7 +72,7 @@ const Filters = () => {
                 max={1000}
                 color='secondary'
               />
-            </Container>
+            </Box>
           </Box>
         </Grid>
         <Grid item md={6} sm={12}>

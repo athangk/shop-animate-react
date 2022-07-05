@@ -16,4 +16,5 @@ export const Literals = {
   actions: {
     back: 'Back',
   },
+  range: 'Range',
 };

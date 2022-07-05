@@ -90,7 +90,7 @@ const theme = createTheme({
           borderRadius: '10px',
 
           background: 'white',
-          boxShadow: '0 2px 7px 2px rgb(0 192 170 / 20%)',
+          boxShadow: '0 1px 4px 1px rgb(0 192 170 / 50%)',
           '&:hover': {
             cursor: 'inherit',
 
