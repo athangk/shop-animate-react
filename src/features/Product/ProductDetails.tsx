@@ -24,31 +24,34 @@ const ProductDetails = ({ product }: ProductCardDetailsProps) => {
   return (
     <ProductCardDetails>
       <CardContent>
-        <Grid container spacing={1} alignItems='flex-start'>
+        <Grid
+          container
+          spacing={1}
+          alignItems='flex-start'
+          justifyContent='center'
+        >
           <Grid item md={12}>
-            <CardContent>
-              <ProductDiscountWrapper>
-                {product.discount && (
-                  <>
-                    <ProductDiscountOfferLabel />
-                    <ProductDiscountOffer>
-                      {product.discount}%
-                    </ProductDiscountOffer>
-                  </>
-                )}
-              </ProductDiscountWrapper>
-              <ProductDetailTitle variant='h3'>
-                {product.title}
-              </ProductDetailTitle>
-              <ProductDetailPrice variant='h3'>
-                {product.price}€
-              </ProductDetailPrice>
-              <ProductRatingWrapper>
-                <Rating name='simple-controlled' value={product.rating.rate} />
-              </ProductRatingWrapper>
-              <Typography>{product.subtitle}</Typography>
-              <Typography>{product.excerpt}</Typography>
-            </CardContent>
+            <ProductDiscountWrapper>
+              {product.discount && (
+                <>
+                  <ProductDiscountOfferLabel />
+                  <ProductDiscountOffer>
+                    {product.discount}%
+                  </ProductDiscountOffer>
+                </>
+              )}
+            </ProductDiscountWrapper>
+            <ProductDetailTitle variant='h3'>
+              {product.title}
+            </ProductDetailTitle>
+            <ProductDetailPrice variant='h3'>
+              {product.price}€
+            </ProductDetailPrice>
+            <ProductRatingWrapper>
+              <Rating name='simple-controlled' value={product.rating.rate} />
+            </ProductRatingWrapper>
+            <Typography>{product.subtitle}</Typography>
+            <Typography>{product.excerpt}</Typography>
           </Grid>
 
           <Grid item xs={12}>

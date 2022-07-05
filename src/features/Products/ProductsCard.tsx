@@ -6,6 +6,7 @@ import {
   ProductDiscountWrapper,
   ProductDiscountOfferLabel,
   ProductDiscountOffer,
+  CenteredWrapper,
 } from '../components/styled';
 import {
   Grid,
@@ -88,12 +89,12 @@ const ProductsCard = ({ products }: ProductCardProps) => {
                           <Typography align='center' variant='body2'>
                             {product.excerpt}
                           </Typography>
-                          <Container>
+                          <CenteredWrapper>
                             <Rating
                               name='simple-controlled'
                               value={product.rating.rate}
                             />
-                          </Container>
+                          </CenteredWrapper>
                         </CardContent>
                       </CardContent>
                     </Card>

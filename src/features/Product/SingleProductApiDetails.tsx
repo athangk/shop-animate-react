@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Grid, Typography, Box } from '@mui/material';
 import { ProductData } from '../../models/IModelsData';
-import { CommonWrapper } from '../components/styled';
 
 interface ProductCardDetailsProps {
   product: ProductData;
@@ -9,25 +8,17 @@ interface ProductCardDetailsProps {
 
 const SingleProductApiDetails = ({ product }: ProductCardDetailsProps) => {
   return (
-    <CommonWrapper>
+    <Box>
       <Card>
         <CardContent>
           <Grid container spacing={1} alignItems='flex-end'>
             <Grid item md={12}>
               <Box>
-                <Typography
-                  align='center'
-                  variant='body2'
-                  color='text.secondary'
-                >
+                <Typography align='left' variant='body2' color='text.secondary'>
                   {product.description}
                 </Typography>
                 {product && (
-                  <Typography
-                    align='center'
-                    variant='body2'
-                    color='text.primary'
-                  >
+                  <Typography align='left' variant='body2' color='text.primary'>
                     {product.apiData}
                   </Typography>
                 )}
@@ -36,7 +27,7 @@ const SingleProductApiDetails = ({ product }: ProductCardDetailsProps) => {
           </Grid>
         </CardContent>
       </Card>
-    </CommonWrapper>
+    </Box>
   );
 };
 

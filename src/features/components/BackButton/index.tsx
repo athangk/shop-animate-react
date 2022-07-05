@@ -1,4 +1,5 @@
-import styled from '@emotion/styled';
+import { styled } from '@mui/system';
+import { Box } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Literals } from '../../../utilities/literals';
@@ -12,13 +13,14 @@ const backVariants = {
   enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } },
 };
 
-const NavigateBackLink = styled(Link)({
+const NavigateBackLink = styled(Link)(({ theme }) => ({
   color: '#1d524dd9',
   textDecoration: 'none',
   fontWeight: 800,
   textTransform: 'uppercase',
   fontSize: 20,
-});
+  marginLeft: theme.spacing(4),
+}));
 
 interface BackButtonProps {
   navigate: string;

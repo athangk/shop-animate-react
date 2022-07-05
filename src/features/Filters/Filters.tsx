@@ -1,11 +1,4 @@
-import {
-  Grid,
-  Button,
-  Slider,
-  Box,
-  Container,
-  Typography,
-} from '@mui/material';
+import { Grid, Button, Slider, Box, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateFilters } from './FiltersSlice';
@@ -53,10 +46,10 @@ const Filters = () => {
   };
 
   return (
-    <CommonWrapper>
-      <Grid container mb={2} direction={mobile ? 'column' : 'row'}>
-        <Grid item md={6} sm={12} alignItems='center'>
-          <Box ml={2}>
+    <Box ml={4} mr={4}>
+      <Grid container mb={2} sm={12} alignItems='center'>
+        <Grid item xs={12} md={6}>
+          <Box ml={6} mr={4}>
             <Box alignItems='center'>
               <Typography mr={4} color='secondary'>
                 {Literals.range}
@@ -75,7 +68,7 @@ const Filters = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item md={6} sm={12}>
+        <Grid item xs={12} sm={12} md={6}>
           <Grid
             container
             justifyContent={mobile ? 'center' : 'end'}
@@ -108,7 +101,7 @@ const Filters = () => {
           </Grid>
         </Grid>
       </Grid>
-    </CommonWrapper>
+    </Box>
   );
 };
 

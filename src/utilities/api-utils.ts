@@ -1,15 +1,15 @@
-import { Axios, AxiosResponse } from "axios"
-import { ProductData, CategoryData } from "../models/IModelsData"
+import { AxiosResponse } from 'axios';
+import { CategoryData } from '../models/IModelsData';
 
 export const getCategoryImages = (productList: AxiosResponse[]) => {
-  const imageList = productList.map((item) => {
-    return item.data[0].image
-  })
-  return imageList
-}
+  return productList.map((item) => item.data[0].image);
+};
 
-export const normalizeCategoryData = (data: Array<string>, productList: AxiosResponse[]): CategoryData[] => {
-  const imageList = getCategoryImages(productList)
+export const normalizeCategoryData = (
+  data: Array<string>,
+  productList: AxiosResponse[]
+): CategoryData[] => {
+  const imageList = getCategoryImages(productList);
 
   const categoryList: CategoryData[] = data.map((item, i) => ({
     id: item,
@@ -19,10 +19,10 @@ export const normalizeCategoryData = (data: Array<string>, productList: AxiosRes
     image: imageList[i],
     description: item,
     count: 10,
-  }))
-  return categoryList
-}
+  }));
+  return categoryList;
+};
 
 export const sleep = (ms: number) => {
-  return new Promise((resolve) => setTimeout(resolve, ms))
-}
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};

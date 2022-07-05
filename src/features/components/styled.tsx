@@ -9,7 +9,7 @@ export const ProductDiscountWrapper = styled(Box)(({ theme }) => ({
   ml: 1,
   mt: 1,
   position: 'relative',
-  marginBottom: theme.spacing(5),
+  marginBottom: theme.spacing(8),
 }));
 
 export const ProductDiscountOfferLabel = styled(LocalOffer)(({ theme }) => ({
@@ -34,3 +34,8 @@ export const ProductDiscountOffer = styled(Typography)(({ theme }) => ({
 export const CommonWrapper = styled(Box)(({ theme }) => ({
   margin: theme.spacing(4),
 }));
+
+export const CenteredWrapper = styled(Box)({
+  display: 'flex',
+  justifyContent: 'center',
+});

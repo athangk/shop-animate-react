@@ -11,6 +11,7 @@ export const LoaderContainer = styled(Container)(({ theme }) => ({
 export const CategoriesHeaderWrapper = styled(Box)(({ theme }) => ({
   alignText: 'center',
   marginTop: theme.spacing(3.75),
+  marginLeft: theme.spacing(4),
   paddingBottom: theme.spacing(0.75),
   color: theme.palette.secondary.dark,
   minWidth: '100%',
