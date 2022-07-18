@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { fetchCategories, selectCategoriesList } from './CategoriesSlice';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import CategoriesCard from './CategoriesCard';
@@ -9,8 +9,8 @@ import { Literals } from '../../utilities/literals';
 import { CategoriesHeaderWrapper, LoaderContainer } from './styled';
 
 const Categories = () => {
-  const dispatch = useDispatch();
-  const categories = useSelector(selectCategoriesList);
+  const dispatch = useAppDispatch();
+  const categories = useAppSelector(selectCategoriesList);
 
   const fetchAllCategories = () => {
     dispatch(fetchCategories());

@@ -1,11 +1,10 @@
-import * as React from 'react';
+import { useEffect, Fragment } from 'react';
 import {
   fetchProducts,
   selectLoading,
   selectProductsList,
 } from './ProductsSlice';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, Fragment } from 'react';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -25,10 +24,10 @@ import BackButton from '../components/BackButton';
 
 const Products = () => {
   const params = useParams();
-  const dispatch = useDispatch();
-  const products = useSelector(selectProductsList);
-  const loading = useSelector(selectLoading);
-  const category = useSelector((state: RootState) =>
+  const dispatch = useAppDispatch();
+  const products = useAppSelector(selectProductsList);
+  const loading = useAppSelector(selectLoading);
+  const category = useAppSelector((state: RootState) =>
     selectCategoriesById(state, params.categoryId!)
   );
 

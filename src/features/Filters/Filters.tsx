@@ -1,19 +1,18 @@
-import { Grid, Button, Slider, Box, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { updateFilters } from './FiltersSlice';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { FilterData } from '../../models/IModelsData';
+import { Grid, Button, Slider, Box, Typography } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { selectFilters } from './FiltersSlice';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { CommonWrapper } from '../components/styled';
 import { Literals } from '../../utilities/literals';
 
 const Filters = () => {
-  const dispatch = useDispatch();
-  const filtersState = useSelector(selectFilters);
+  const dispatch = useAppDispatch();
+  const filtersState = useAppSelector(selectFilters);
   const [order, setOrder] = useState<string>(filtersState.order);
   const [range, setRange] = React.useState<number[]>([
     filtersState.rangeMin,

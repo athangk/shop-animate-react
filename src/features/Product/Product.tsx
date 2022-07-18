@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { useAppSelector } from '../../store/hooks';
 import axios from 'axios';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
@@ -28,7 +28,7 @@ interface ProductProps {
 const Product = ({ productId }: ProductProps) => {
   const params = useParams();
   const productIdentifier = params.productId ? params.productId : productId;
-  const reduxProduct = useSelector((state: RootState) =>
+  const reduxProduct = useAppSelector((state: RootState) =>
     selectProductById(state, productIdentifier!)
   );
   const [status, setStatus] = useState<boolean>(false);
