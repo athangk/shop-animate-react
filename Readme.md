@@ -1,6 +1,6 @@
 # Categories n products
 
-Animated responsive sample eshop with ReactJS, Typescript, Redux toolkit, slice reducers, Material UI styled components and Framer motion.
+Animated responsive sample B2B eshop with ReactJS, Typescript, Redux toolkit, slice reducers, Material UI styled components and Framer motion.
 
 
 #### - Open app, navigate to products full cycle
